@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorro Mágico</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🎀 Sweet Savings 🎀</h1>
+        <div class="goal-section">
+            <label for="goalAmount">Meta de ahorro (COP):</label>
+            <input type="number" id="goalAmount" placeholder="Ej: 500000">
+            
+            <label for="goalReason">¿Para qué ahorras?</label>
+            <input type="text" id="goalReason" placeholder="Ej: Tableta de dibujo">
+            
+            <button id="setGoal">Guardar Meta</button>
+        </div>
+
+        <div class="progress-section hidden">
+            <h2>💖 Progreso 💖</h2>
+            <p><strong>Razón:</strong> <span id="savedReason"></span></p>
+            <p><strong>Meta:</strong> $<span id="savedGoal">0</span> COP</p>
+            <p><strong>Ahorrado:</strong> $<span id="currentSavings">0</span> COP</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            
+            <label for="amount">Agregar/Quitar dinero:</label>
+            <input type="number" id="amount" placeholder="Ej: 10000">
+            <div class="buttons">
+                <button id="addMoney">➕ Agregar</button>
+                <button id="removeMoney">➖ Quitar</button>
+                <button id="resetGoal" class="danger hidden">🗑️ Borrar Meta</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
